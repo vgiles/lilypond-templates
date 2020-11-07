@@ -17,18 +17,21 @@
 % This seems to also be where one inputs music, the data-entry point
 upper = \relative c'' {
     \clef treble
-    \key \dodecaphonic
+    \key dodecaphonic
     \numericTimeSignature \time 4/4
     %% input music
+}
 
 lower = \relative c {
     \clef bass
-    \key \dodecaphonic
+    \key dodecaphonic
     \numericTimeSignature \time 4/4
     %% input music
 }
 
 % Score block
+%% Note to self: it appears I can do the note input in separate files and use includes
+%% to then load them up into the score itself.
 \score {
     \new PianoStaff <<
         \new Staff \upper
