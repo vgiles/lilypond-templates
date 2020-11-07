@@ -20,7 +20,6 @@ upper = \relative c'' {
     \key \dodecaphonic
     \numericTimeSignature \time 4/4
     %% input music
-}
 
 lower = \relative c {
     \clef bass
