@@ -1,5 +1,5 @@
 % Beginnings of a stylesheet
-% V 0.1
+% V 0.2
 
 % defining custom functions
 % this one inserts a boxed text ie an instruction

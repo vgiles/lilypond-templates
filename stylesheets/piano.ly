@@ -26,7 +26,7 @@ upper = \relative c'' {
 	\tempo 4 = 100
     \clef treble
     \time 4/4
-    \mark "Elegantly"
+    \mark "Elegantly" % This is the tempo instructions
     %% input music
     %% Measure 1
 	\tuplet 3/4 {\pp
