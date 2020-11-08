@@ -38,14 +38,14 @@ textinst =
         \override TimeSignature.Y-offset = 4
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         \override TupletBracket.bracket-visibility = ##t
-	      \override Beam.beam-thickness = #1
-        \override Beam.damping = #100
+	    \override Beam.beam-thickness = #1
+        % \override Beam.damping = #100
         % \override Beam.gap = #0.5
         % \override Beam.ideal-slope-factor = #0
-        \override Stem.details.beamed-lengths = #'(5)
+        % \override Stem.details.beamed-lengths = #'(5)
         \override Beam.length-fraction = #1.5
         %\override Stem.details.secondary-beam-demerit = #'(20)
-
+        \override VerticalAxisGroup.default-staff-staff-spacing.basic-distance = #30
         \accidentalStyle Score.modern
     }
     \context {
@@ -98,8 +98,8 @@ textinst =
     #(define bottom-margin (* 0.5 in))
     system-system-spacing.basic-distance = 12
     score-system-spacing =
-        #'((basic-distance . 12)
-           (minimum-distance . 6)
-           (padding . 1)
+        #'((basic-distance . 20)
+           (minimum-distance . 15)
+           (padding . 10)
            (stretchability . 12))
 }
