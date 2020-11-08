@@ -7,6 +7,8 @@
 
 \version "2.20.0"
 
+\include "vg-stylesheet.ily"
+
 % Define title and composer
 \header {
     title = "Title to be confirmed"
@@ -17,22 +19,29 @@
 % Define a piano
 % This seems to also be where one inputs music, the data-entry point
 upper = \relative c'' {
+	\tempo 4 = 90
     \clef treble
-    \numericTimeSignature \time 4/4
+    \time 4/4
     %% input music
-	\override TupletNumber.text = #tuplet-number::calc-fraction-text
-	\override Beam.beam-thickness = #0.6
-	\tuplet 3/4 {
+	\tuplet 3/4 {\pp
     	\tuplet 5/4 {c16[d e, r16 f']}
+        \textinst "Delicately, with much rubato"
 		(d4
 		e16[\tuplet 3/2 {f32[f, g}r8]})
-	\tuplet 7/4 {d4 e fis g r4 r8[ fis8] r4}
+	\tuplet 7/4 {d4\p e fis g r4 r8[ fis8] r4}
+    \bar "|."
 }
 
 lower = \relative c {
     \clef bass
-    \numericTimeSignature \time 4/4
+    \time 4/4
     %% input music
+    \tuplet 3/4 {\pp
+    	\tuplet 5/4 {c16[d e, r16 f']}
+		(d4
+		e16[\tuplet 3/2 {f32[f, g}r8]})
+	\tuplet 6/4 {\<d4 e\f \textinst "Bombastic" fis g r4 r8[ fis8]}
+    \bar "|."
 }
 
 % Score block
@@ -40,7 +49,6 @@ lower = \relative c {
 %% to then load them up into the score itself.
 \score {
     \new PianoStaff <<
-		\accidentalStyle Score.modern
         \new Staff \upper
         \new Staff \lower
         >>
