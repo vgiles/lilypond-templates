@@ -19,16 +19,26 @@ upper = \relative c'' {
     \clef treble
     \key dodecaphonic
     \numericTimeSignature \time 4/4
+   	\override Stem #'direction = #’up
+    \override Beam #'positions = #’(-5 . -5)
+	\override Beam.beam-thickness = #0.8
+	\override Beam.length-fraction = #1.3
     %% input music
+    c16[ d16 e16 f16]
+    c16[ d16 e16 f16]  
 }
 
 lower = \relative c {
     \clef bass
     \key dodecaphonic
     \numericTimeSignature \time 4/4
+   	\override Stem #'direction = #’up
+    \override Beam #'positions = #’(-9 . -9)
+	\override Beam.beam-thickness = #1.9
+	\override Beam.length-fraction = #1.3
     %% input music
-    c'16[ d'16 e'16 f'16]
-    c''16[ d''16 e''16 f''16]   
+    c16[ d16 e,16 f16]
+    c16[ d16 e16 f16]  
 }
 
 % Score block
@@ -39,19 +49,5 @@ lower = \relative c {
         \new Staff \upper
         \new Staff \lower
         >>
-    \override Stem #'direction = #down
-    \override Beam #'positions = #'(-6 . -6)'
 }
 
-% %%% BEGIN SNIPPET %%%
-
-% \version "2.9.11"
-
-% \new Staff {
-% \override Stem #'direction = #down
-% \override Beam #'positions = #'(-6 . -6)
-% c'16[ d'16 e'16 f'16]
-% c''16[ d''16 e''16 f''16]
-% }
-
-% %%% END SNIPPET %%%
