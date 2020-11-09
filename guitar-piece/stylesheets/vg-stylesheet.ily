@@ -31,6 +31,7 @@ textinst =
         \Score
         \override MetronomeMark.extra-offset = #'(-5 . 0)
         \override MetronomeMark.padding = #'3
+        proportionalNotationDuration = #(ly:make-moment 1/20)
     }
     \context {
         \Staff
@@ -48,6 +49,8 @@ textinst =
         % \override VerticalAxisGroup.default-staff-staff-spacing.basic-distance = #30
         \accidentalStyle Score.modern
         \override Hairpin.stencil = #flared-hairpin
+        % \set Score.proportionalNotationDuration = #(ly:make-moment 1/16)
+        %  \override Score.SpacingSpanner.strict-note-spacing = ##t        
     }
     \context {
         \Voice
@@ -89,6 +92,7 @@ textinst =
 }
 
 \paper{
+    % #(set-default-paper-size "a4" 'portrait)
     #(define fonts
         (set-global-fonts
             #:roman "Avenir Light"

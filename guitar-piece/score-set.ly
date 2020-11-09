@@ -31,3 +31,7 @@
     }
     \guitar
 }
+
+% \paper {
+%     #(set-default-paper-size "a4" 'landscape)
+% }

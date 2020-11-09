@@ -188,7 +188,7 @@ guitar = \relative c'' {
     cis,8 [ c \< d ees e16 \mf \> [ d]]
     |
     %% Measure 28
-    e'4.:32 \p ~ e8:32 \once \override \NoteHead.style = #'cross cis \sfz
+    e'4.:32 \p ~ e8:32 \once \override \noteHead.style = #'cross cis \sfz
     |
     %% Measure 29
     \tempo "urgent" 4 = 92
@@ -197,7 +197,7 @@ guitar = \relative c'' {
     \tuplet 3/2 {d8 \< a16 g' g8:64 \f \< ~}
     |
     %% Measure 30
-    \tuplet 5/4 {g16:64 [\ff \> \glissando g,4] } r4 \f
+    \tuplet 5/4 {g16:128 \ff \> \glissando g,4 } r4 \f
     |
     %% Measure 31
     \tempo 8 = 78
@@ -218,9 +218,9 @@ guitar = \relative c'' {
         gih16 [a \< bes aisih ais]
     }
     <<
-        {\tuplet 3/2 {dis8 \ff [d \once \override \NoteHead.style = $'cross a,,]}}
+        {\tuplet 3/2 {dis8 \ff [d \once \override \NoteHead.style = #'cross a,,]}}
         \\
-        {\tuplet 3/2 {cis'8 [d \once \hideNotes a \fff]}}
+        {\tuplet 3/2 {cis'8 [d \once \override \NoteHead.style = #'cross a, \fff]}}
     >>
     \tuplet 3/2 {r8 [ fis \p \< g16-. ais-.]}
     |
