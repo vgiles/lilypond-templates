@@ -45,8 +45,9 @@ textinst =
         % \override Stem.details.beamed-lengths = #'(5)
         \override Beam.length-fraction = #1.5
         %\override Stem.details.secondary-beam-demerit = #'(20)
-        \override VerticalAxisGroup.default-staff-staff-spacing.basic-distance = #30
+        % \override VerticalAxisGroup.default-staff-staff-spacing.basic-distance = #30
         \accidentalStyle Score.modern
+        \override Hairpin.stencil = #flared-hairpin
     }
     \context {
         \Voice
@@ -96,10 +97,10 @@ textinst =
     ))
     #(define top-margin (* 0.5 in))
     #(define bottom-margin (* 0.5 in))
-    system-system-spacing.basic-distance = 12
+    system-system-spacing.basic-distance = 20
     score-system-spacing =
         #'((basic-distance . 20)
-           (minimum-distance . 15)
-           (padding . 10)
+           (minimum-distance . 30)
+           (padding . 20)
            (stretchability . 12))
 }
