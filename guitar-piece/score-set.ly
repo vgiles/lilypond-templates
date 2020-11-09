@@ -13,11 +13,11 @@
 % Define default title and composer
 \header {
     % dedication = "For Emily"
-    % subtitle = "Subtitle or instrumentation"
+    % subtitle = "I guess it's probably more like testing lilypond..."
     subsubtitle = "guitar"
     title = "Testing Different Pencils"
     composer = "Vincent Giles"
-    arranger = "2013"
+    arranger = "2013 (minor rev 2020)"
     tagline = "with all the love"
 }
 
@@ -25,5 +25,9 @@
 %% Note to self: it appears I can do the note input in separate files and use includes
 %% to then load them up into the score itself.
 \score {
-    \new Staff \guitar
+    \new Staff \with {
+        instrumentName = #"guitar "
+        shortInstrumentName = "gt. "
+    }
+    \guitar
 }

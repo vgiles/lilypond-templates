@@ -101,32 +101,127 @@ guitar = \relative c'' {
     |
     %% Measure 12
     <<
-        {a'2.:32 ~}
+        {b'2.:32 ~}
         \\
         {dis,,4 \laissezVibrer \ppp \< \hideNotes d d \mf \unHideNotes}
     >>
     |
     %% Measure 13
     <<
-        {a''2.:32 ~}
+        {b''2.:32 ~}
         \\
         {\hideNotes d,,4 \> d d \unHideNotes }
     >>
     |
     %% Measure 14
     <<
-        {a''2.:32 ~}
+        {b''2.:32 ~}
         \\
         {\hideNotes d,,4 \pp \< d d \f \unHideNotes}
     >>
     |
     %% Measure 15
     << 
-        {a''2.:32 ~}
+        {b''2.:32 ~}
         \\
         {\hideNotes d,,4 d \fff \> d \unHideNotes}
     >>
     |
     %% Measure 16
-
+    << 
+        {   \override Beam.gap-count = #3
+            \repeat tremolo 8 { b''32. a }
+            }
+        \\
+        {\hideNotes d,,4 d d \pp \unHideNotes}
+    >>
+    |
+    %% Measure 17
+    \time 4/16
+    \textinst "play cluster between indicated notes"
+    \parenthesize <e' e'>16 \fff [\parenthesize <c d'>16 \parenthesize <e,, d'>16 \parenthesize <e d'>16]
+    |
+    %% Measure 18
+    \parenthesize <f' e'>16 [\parenthesize <d c'>16 \parenthesize <b' d'>16 \parenthesize <g' f'>16]
+    |
+    %% Measure 19
+    \time 3/4
+    \parenthesize <d, c'>2.:32
+    |
+    %% Measure 20
+    \parenthesize <a' a'>2.:32
+    |
+    %% Measure 21
+    \time 2/4
+    \parenthesize <g,, c'>2:32
+    |
+    %% Measure 22
+    \once \override Beam.grow-direction = #RIGHT
+    \once \override Beam.beam-thickness = #0.8
+    % \featherDurations #(ly:make-moment 6/4)
+    { \tuplet 5/4 {
+        cis''16[ \p \< d b c dis ]
+    }
+    } 
+    \textinst "pop string"
+    \once \override NoteHead.style = #'cross
+    a,4 \fff
+    \bar "||" \break
+    %% Measure 23
+    \textinst "3-second pause before moving to next measure"
+    \once \hideNotes c'2\fermata
+    \bar "||" \break
+    %% Measure 24
+    \tempo "loose with rubato" 8 = 78
+    \time 4/8
+    r8 [cis \f \< a' b]
+    |
+    %% Measure 25
+    \time 3/8
+    gis [ b \fff a \p]
+    |
+    %% Measure 26
+    fis16 [gis f g e g]
+    |
+    %% Measure 27
+    \time 5/8
+    cis,8 [ c \< d ees e16 \mf \> [ d]]
+    |
+    %% Measure 28
+    e'4.:32 \p ~ e8:32 \once \override \NoteHead.style = #'cross cis \sfz
+    |
+    %% Measure 29
+    \tempo "urgent" 4 = 92
+    \time 2/4
+    \tuplet 7/4 {c16 \mp [b cis e c bes d~ ]}
+    \tuplet 3/2 {d8 \< a16 g' g8:64 \f \< ~}
+    |
+    %% Measure 30
+    \tuplet 5/4 {g16:64 [\ff \> \glissando g,4] } r4 \f
+    |
+    %% Measure 31
+    \tempo 8 = 78
+    \time 3/8
+    ais,8 \pp [a' g] 
+    |
+    %% Measure 32
+    \time 5/16
+    ais16 \< [aisih gisih gis fisih \p]
+    %% Measure 33
+    |
+    eisih16 \> [f fis fih g \pp]
+    |
+    \time 3/4
+    \once \override Beam.grow-direction = #RIGHT
+    \once \override Beam.beam-thickness = #0.8
+    \tuplet 5/4 {
+        gih16 [a \< bes aisih ais]
+    }
+    <<
+        {\tuplet 3/2 {dis8 \ff [d \once \override \NoteHead.style = $'cross a,,]}}
+        \\
+        {\tuplet 3/2 {cis'8 [d \once \hideNotes a \fff]}}
+    >>
+    \tuplet 3/2 {r8 [ fis \p \< g16-. ais-.]}
+    |
 }
