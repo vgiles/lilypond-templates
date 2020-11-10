@@ -31,7 +31,7 @@ textinst =
         \Score
         \override MetronomeMark.extra-offset = #'(-5 . 0)
         \override MetronomeMark.padding = #'3
-        proportionalNotationDuration = #(ly:make-moment 1/20)
+        % proportionalNotationDuration = #(ly:make-moment 1/20)
     }
     \context {
         \Staff
@@ -40,7 +40,7 @@ textinst =
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         \override TupletBracket.bracket-visibility = ##t
 	    \override Beam.beam-thickness = #1
-        % \override Beam.damping = #100
+        % \override Beam.damping = #+inf.0 #+inf.0
         % \override Beam.gap = #0.5
         % \override Beam.ideal-slope-factor = #0
         % \override Stem.details.beamed-lengths = #'(5)
@@ -50,7 +50,7 @@ textinst =
         \accidentalStyle Score.modern
         \override Hairpin.stencil = #flared-hairpin
         % \set Score.proportionalNotationDuration = #(ly:make-moment 1/16)
-        %  \override Score.SpacingSpanner.strict-note-spacing = ##t        
+        \override Score.SpacingSpanner.strict-note-spacing = ##t        
     }
     \context {
         \Voice

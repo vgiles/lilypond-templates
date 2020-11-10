@@ -153,14 +153,14 @@ guitar = \relative c'' {
     |
     %% Measure 21
     \time 2/4
-    \parenthesize <g,, c'>2:32
+    \parenthesize <g, c'>2:32
     |
     %% Measure 22
     \once \override Beam.grow-direction = #RIGHT
     \once \override Beam.beam-thickness = #0.8
     % \featherDurations #(ly:make-moment 6/4)
     { \tuplet 5/4 {
-        cis''16[ \p \< d b c dis ]
+        cis'16[ \p \< d b c dis ]
     }
     } 
     \textinst "pop string"
