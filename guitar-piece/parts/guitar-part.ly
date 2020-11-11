@@ -189,6 +189,7 @@ guitar = \relative c'' {
     |
     %% Measure 28
     e'4.:32 \p ~ e8:32 \once \override \noteHead.style = #'cross cis \sfz
+    \break
     |
     %% Measure 29
     \tempo "urgent" 4 = 92
@@ -203,14 +204,16 @@ guitar = \relative c'' {
     \tempo 8 = 78
     \time 3/8
     ais,8 \pp [a' g] 
+    \break
     |
     %% Measure 32
     \time 5/16
     ais16 \< [aisih gisih gis fisih \p]
     %% Measure 33
     |
-    eisih16 \> [f fis fih g \pp]
+    eisih16 \> [f fis fih g \pp] 
     |
+    %% Measure 34
     \time 3/4
     \once \override Beam.grow-direction = #RIGHT
     \once \override Beam.beam-thickness = #0.8
@@ -222,6 +225,49 @@ guitar = \relative c'' {
         \\
         {\tuplet 3/2 {cis'8 [d \once \override \NoteHead.style = #'cross a, \fff]}}
     >>
-    \tuplet 3/2 {r8 [ fis \p \< g16-. ais-.]}
+    \tuplet 3/2 {r8 [ fis' \p \< g16-. ais-. \!]}
     |
+    %% Measure 35
+    \time 2/4
+    <<
+        {\tuplet 3/2 {a'8 [b bes:64 ~] }}
+        \\
+        {\tuplet 5/4 {r4 \mf [a16, \p]}}
+    >>
+    <<
+        {bes'4:32 ~}
+        \\
+        {\tuplet 5/4 {bes,16 [a g \< aes r16 \! \f]}}
+    >>
+    |
+    %% Measure 36
+    <<
+        {bes'4:32 }
+        \\
+        {r16 [e \p c, dis \> ~] \tuplet 5/4 {dis [ e' \p cis cisih a,]}}
+    >>
+    |
+    %% Measure 37
+    \time 3/8
+    e,8 [f gis'16-. a'-. \>]
+    |
+    %% Measure 38
+    gis8 [e \p a ~]
+    %% Measure 39
+    \time 2/8
+    a r8 
+    |
+    %% Measure 40
+    \time 7/16
+    \parenthesize <d, d'>16 [\ff q q q q q q]
+    %% Measure 41
+    \parenthesize <c c'>16 [ q q q q \parenthesize <g g'>16 \parenthesize <c c'>16]
+    %% Measure 42
+    \time 4/16
+    \parenthesize <e e'>16 [\parenthesize <b, g'>16 \< \parenthesize <f' f'>16 \parenthesize <d' d'>16]
+    |
+    %% Measure 43
+    \time 2/8
+    \parenthesize <e e'>4:32 \fff
+    \bar "|."
 }

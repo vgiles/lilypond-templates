@@ -18,7 +18,8 @@
     title = "Testing Different Pencils"
     composer = "Vincent Giles"
     arranger = "2013 (minor rev 2020)"
-    tagline = "with all the love"
+    tagline = ""
+    copyright = "2013 Vincent Giles"
 }
 
 % Score block
@@ -32,6 +33,3 @@
     \guitar
 }
 
-% \paper {
-%     #(set-default-paper-size "a4" 'landscape)
-% }
