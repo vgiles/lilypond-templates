@@ -19,7 +19,7 @@ guitar = \relative c'' {
     \f\<aes8 g' a
     |
     %% Measure 2
-    \fff\>b a e \p
+    \fff\>c a e \p
     |
     %% Measure 3
     \time 5/8

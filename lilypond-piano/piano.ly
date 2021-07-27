@@ -23,9 +23,9 @@ upper = \relative c'' {
 	\override TupletNumber.text = #tuplet-number::calc-fraction-text
 	\override Beam.beam-thickness = #0.6
 	\tuplet 3/4 {
-    	\tuplet 5/4 {c16[d e, r16 f']}
+    	\tuplet 5/4 {c16[e f, r16 f']}
 		(d4
-		e16[\tuplet 3/2 {f32[f, g}r8]})
+		e16[\tuplet 3/2 {f32[f, g}r16]})
 	\tuplet 7/4 {d4 e fis g r4 r8[ fis8] r4}
 }
 
